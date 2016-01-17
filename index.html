@@ -2,59 +2,83 @@
 <html>
 <head>
   <title>Guessing Game 201n2</title>
-  <link rel="stylesheet" href="css/c01.css"/>
+  <!-- <link rel="stylesheet" href="css/c01.css"/> -->
+  <a href="#"></a>
 </head>
 <body>
   <h1>Hello World!</h1>
   <p> My name is Susan.</p>
   <script>
-    // var userName = prompt('Hello, What's your name?');
-    alert("Hello, " + username + "very nice to meet you");
-
-    console.log(This is the userName variable + username);
-
-    if (userName === 'Scott') {
-      console.log('true');
+    var correctAnswers = 0;
+    var userName = prompt('Hello, What\'s your name?');
+    alert("Hello, " + userName + " very nice to meet you");
+    console.log('Let\'s play a game' + userName);
+    if (userName === 'Susan'){
+      console.log('true')
     } else if (userName === 'Susan'){
-      console.log('Susan is correct.')
+      console.log('Susan is correct.');
     } else {
-      console.log('You didn't guess the correct name.'');
-      console.log('Hello World')
-      console.log(This is the userName variable + username);
-      //Question One
-      var questionOne = prompt ("Question 1: How many brothers do I have?")
-      console.log(This is the answer to the first question: + questionOne)
-      var num1 = parseInt(questionOne)
-      if (num1 === 3);
-      alert ("Correct" + userName + "I have three brothers");
-      else if (num1 > 3){
-      alert ("No, only 3 brothers");
-     }
-      else if (num1 == < 3);{
-      alert ("No, only 3 brothers")
-      }
-      //Question Two
-      var questionTwo = prompt ("Question 2: How many sisters do I have?")
-      console.log(This is the answer to the first question: + questionTwo)
-      var num1 = parseInt(questionTwo)
-      if (num1 === 6);
-      alert ("Correct"  + userName + "I have six sisters")}
-      else if (num1 < 6);{
-      alert ("No, only 6 sisters"){
-        else if (num1 >6);{
-          alert ("No, only 6 sisters"){
-        }
-        //Question three
-        var questionThree = prompt ("Question 3: Are there any twins?")
-        console.log(This is the answer to the first question: + questionThree)
-        if (var === 'true');
-        alert ("Correct"  + userName + "Yes, there is a set of twins")}
-        else if (var === 'false');{
-        alert ("Yes, there is a set of twins");{
-      }}
-
-
+      console.log('You didn\'t guess the correct name');
+      console.log('Hello World');
     }
-      </script>
+      //Question One
+    var questionOne = prompt("Question 1: How many brothers do I have?");
+    console.log('This is the answer to the first question:' + questionOne);
+    var num1 = parseInt(questionOne);
+    if (num1 === 3){
+      alert("Correct " + userName + " I have three brothers");
+      correctAnswers++;
+    } else if (num1 > 3){
+      alert("No, only 3 brothers");
+    } else if (num1 < 3){
+      alert("No, 3 brothers");
+    }
+      //Question Two
+    var questionTwo = prompt("Question 2: How many sisters do I have?")
+    console.log('This is the answer to the first question:' + questionTwo);
+    var num1 = parseInt(questionTwo)
+    if (num1 === 6){
+      document.write('Correct , I have six sisters');
+      alert("Correct "  + userName + " I have six sisters");
+      correctAnswers++;
+    } else if (num1 < 6){
+      alert("No, only 6 sisters");
+    } else if (num1 > 6){
+      alert("No, 6 sisters")
+    }
+        //Question three
+    var questionThree = prompt("Question 3: Are there any twins?").toLowerCase()
+    console.log('This is the answer to the first question:' + questionThree);
+    console.log(questionThree);
+    if (questionThree === 'yes'){
+      correctAnswers++;
+      alert("Correct "  + userName + " Yes,  there is a set of twins");
+    } else if (questionThree === 'No'){
+      alert("No, there is a set of twins")
+    }
+    // Question four
+    var questionFour = parseInt(prompt("Question 4: How many dogs in the family?"))
+    console.log('This is the answer to the first question:' + questionFour);
+    console.log(questionFour);
+    if (questionFour === 1){
+      alert("Correct "  + userName + "There is one dog!");
+      correctAnswers++;
+    } else if (questionFour > 1){
+      alert("You guessed too high, only one dog");
+    }
+      alert("You guessed " + correctAnswers + " Out of four correct")
+    console.log('This is the answer to the first question:' + correctAnswers);
+    console.log(correctAnswers);
+    var num1 = (correctAnswers);
+    if (num1 === '4'){
+      alert("Way to go! "  + userName + "You answered all four questions correctly!");
+    } else if (num1 === '3'){
+      alert("Bummer ," + userName + "You only guessed three correctly.")
+    } else if (num1 === '2'){
+      alert("Bummer ," + userName + "You only guessed two correctly.")
+    } else if (num1 === '1'){
+      alert("Bummer , " + userName + "You only guessed one correctly.");
+    };
+       </script>
       </body>
       </html>
